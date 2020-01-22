@@ -104,3 +104,6 @@ typings/
 .tern-port
 
 src/fonts/tmp
+src/tiles/inputs
+src/tiles/tmp
+dist/tiles

@@ -9,16 +9,20 @@
     "node": "10"
   },
   "scripts": {
-    "build": "yarn fonts && yarn sprites && yarn styles",
     "fonts": "node src/fonts/index.js",
+    "labels": "node src/tiles/labels.js",
     "sprites": "node src/sprites/index.js",
-    "styles": "node src/styles/index.js"
+    "styles": "node src/styles/index.js",
+    "tiles": "node src/tiles/index.js"
   },
   "dependencies": {
     "@mapbox/spritezero": "^6.2.0-dev",
+    "@turf/turf": "^5.1.6",
     "d3-dsv": "^1.2.0",
     "fontnik": "^0.5.3",
-    "glyph-pbf-composite": "^0.0.2"
+    "glyph-pbf-composite": "^0.0.2",
+    "polylabel": "^1.0.2",
+    "tippecanoe": "^0.5.0"
   },
   "devDependencies": {
     "svgo": "^1.3.2"
