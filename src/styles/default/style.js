@@ -9,7 +9,8 @@ const filters = {
 
 module.exports = (origin, stops, row) => ({
   version: 8,
-  sprite: origin + '/sprites/atlas',
+  name: 'Atlas Default',
+  sprite: origin + '/sprites/default/sprite',
   glyphs: origin + '/fonts/{fontstack}/{range}.pbf',
   sources: {
     fieldmaps: {
