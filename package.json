@@ -9,10 +9,14 @@
     "node": "10"
   },
   "scripts": {
+    "compress": "cd dist && tar --exclude='*.DS_Store' -zcvf atlas-styles.tar.gz fonts sprites styles tiles",
+    "extract": "tar -xvf dist/atlas-styles.tar.gz --directory static",
     "fonts": "node src/fonts/index.js",
     "labels": "node src/tiles/labels.js",
     "sprites": "node src/sprites/index.js",
     "styles": "node src/styles/index.js",
+    "sync": "aws s3 sync dist s3://fieldmaps-atlas --exclude '*.DS_Store'",
+    "sync-rm": "aws s3 rm s3://fieldmaps-atlas --recursive --exclude '*' --include '*.DS_Store'",
     "tiles": "node src/tiles/index.js"
   },
   "dependencies": {
