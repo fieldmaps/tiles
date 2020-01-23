@@ -399,10 +399,7 @@ module.exports = (origin, stops, row) => ({
       id: 'undetermined-areas-text',
       layout: {
         'text-field': '{name}',
-        'text-font': [
-          'noto-sans-condensed-light-italic',
-          'noto-sans-condensed-light',
-        ],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-line-height': 1,
         'text-max-width': 2,
         'text-size': 16,
@@ -422,10 +419,7 @@ module.exports = (origin, stops, row) => ({
       id: 'admin2-text',
       layout: {
         'text-field': '{name}',
-        'text-font': [
-          'noto-sans-condensed-light-italic',
-          'noto-sans-condensed-light',
-        ],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-line-height': 1,
         'text-max-width': 2,
         'text-size': 16,
@@ -445,10 +439,7 @@ module.exports = (origin, stops, row) => ({
       id: 'admin1-text',
       layout: {
         'text-field': '{name}',
-        'text-font': [
-          'noto-sans-condensed-light-italic',
-          'noto-sans-condensed-light',
-        ],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-line-height': 1,
         'text-max-width': 2,
         'text-size': 20,
@@ -468,10 +459,7 @@ module.exports = (origin, stops, row) => ({
       id: 'admin0-text',
       layout: {
         'text-field': '{name}',
-        'text-font': [
-          'noto-sans-condensed-light-italic',
-          'noto-sans-condensed-light',
-        ],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-size': 22,
       },
       minzoom: stops.admin0[0][0],
