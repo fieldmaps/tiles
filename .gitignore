@@ -80,7 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-# dist
+dist
 
 # Gatsby files
 .cache/
@@ -106,4 +106,3 @@ typings/
 src/fonts/tmp
 src/tiles/inputs
 src/tiles/tmp
-dist/tiles
