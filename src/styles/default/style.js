@@ -294,7 +294,7 @@ module.exports = (origin, stops, row) => ({
       layout: {
         'text-anchor': 'bottom-left',
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light'],
+        'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
       minzoom: stops.settlements6[1][0],
@@ -312,7 +312,7 @@ module.exports = (origin, stops, row) => ({
       layout: {
         'text-anchor': 'bottom-left',
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light'],
+        'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
       minzoom: stops.settlements5[1][0],
@@ -330,7 +330,7 @@ module.exports = (origin, stops, row) => ({
       layout: {
         'text-anchor': 'bottom-left',
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light'],
+        'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
       minzoom: stops.settlements4[1][0],
@@ -348,7 +348,7 @@ module.exports = (origin, stops, row) => ({
       layout: {
         'text-anchor': 'bottom-left',
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light'],
+        'text-font': ['noto-sans-condensed-light'],
         'text-size': 14,
       },
       minzoom: stops.settlements3[1][0],
@@ -366,7 +366,7 @@ module.exports = (origin, stops, row) => ({
       layout: {
         'text-anchor': 'bottom-left',
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light'],
+        'text-font': ['noto-sans-condensed-light'],
         'text-size': 14,
       },
       minzoom: stops.settlements2[1][0],
@@ -384,7 +384,7 @@ module.exports = (origin, stops, row) => ({
       layout: {
         'text-anchor': 'bottom-left',
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light'],
+        'text-font': ['noto-sans-condensed-light'],
         'text-size': 14,
       },
       paint: {
@@ -399,7 +399,7 @@ module.exports = (origin, stops, row) => ({
       id: 'undetermined-areas-text',
       layout: {
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light-italic'],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-line-height': 1,
         'text-max-width': 2,
         'text-size': 16,
@@ -419,7 +419,7 @@ module.exports = (origin, stops, row) => ({
       id: 'admin2-text',
       layout: {
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light-italic'],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-line-height': 1,
         'text-max-width': 2,
         'text-size': 16,
@@ -439,7 +439,7 @@ module.exports = (origin, stops, row) => ({
       id: 'admin1-text',
       layout: {
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light-italic'],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-line-height': 1,
         'text-max-width': 2,
         'text-size': 20,
@@ -459,7 +459,7 @@ module.exports = (origin, stops, row) => ({
       id: 'admin0-text',
       layout: {
         'text-field': '{name}',
-        'text-font': ['roboto-condensed-light-italic'],
+        'text-font': ['noto-sans-condensed-light-italic'],
         'text-size': 22,
       },
       minzoom: stops.admin0[0][0],

@@ -9,8 +9,8 @@
     "node": "10"
   },
   "scripts": {
-    "compress": "cd dist && tar --exclude='*.DS_Store' -zcvf atlas-styles.tar.gz fonts sprites styles tiles",
-    "extract": "tar -xvf dist/atlas-styles.tar.gz --directory static",
+    "compress": "cd dist && tar --exclude='*.DS_Store' -zcf atlas-styles.tar.gz fonts sprites styles tiles",
+    "extract": "tar -xf dist/atlas-styles.tar.gz --directory static",
     "fonts": "node src/fonts/index.js",
     "labels": "node src/tiles/labels.js",
     "sprites": "node src/sprites/index.js",
