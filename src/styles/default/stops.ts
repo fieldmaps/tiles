@@ -1,4 +1,4 @@
-module.exports = n => ({
+export default (n: number) => ({
   rivers: [
     [0, 0],
     [n + 5, 3],

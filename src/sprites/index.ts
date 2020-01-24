@@ -1,7 +1,8 @@
-const spritezero = require('@mapbox/spritezero');
-const fs = require('fs');
-const glob = require('glob');
-const path = require('path');
+// @ts-ignore
+import spritezero from '@mapbox/spritezero';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
 
 const dist = path.resolve(__dirname, '../../dist');
 const distDir = path.resolve(dist, 'sprites');
@@ -24,15 +25,15 @@ for (const pxRatio of [1, 2, 4]) {
     const jsonPath = path.resolve(typeDir, 'sprite@' + pxRatio + 'x.json');
     spritezero.generateLayout(
       { imgs: svgs, pixelRatio: pxRatio, format: true },
-      (err, dataLayout) => {
+      (err: any, dataLayout: any) => {
         if (err) return;
         fs.writeFileSync(jsonPath, JSON.stringify(dataLayout));
       },
     );
     spritezero.generateLayout(
       { imgs: svgs, pixelRatio: pxRatio, format: false },
-      (err, imageLayout) => {
-        spritezero.generateImage(imageLayout, (err, image) => {
+      (err: any, imageLayout: any) => {
+        spritezero.generateImage(imageLayout, (err: any, image: any) => {
           if (err) return;
           fs.writeFileSync(pngPath, image);
         });

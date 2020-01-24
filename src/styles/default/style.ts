@@ -7,7 +7,7 @@ const filters = {
   settlements6: ['!in', 'type', 1, 2, 3, 4, 5, 'city', 'town'],
 };
 
-module.exports = (origin, stops, row) => ({
+export default (origin: string, stops: any, row: any) => ({
   version: 8,
   name: 'Atlas Default',
   sprite: origin + '/sprites/default/sprite',

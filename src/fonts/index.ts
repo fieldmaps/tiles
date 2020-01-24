@@ -1,10 +1,8 @@
-const path = require('path');
-const fs = require('fs');
-const glyphs = require('../../node_modules/glyph-pbf-composite/index');
-const { execFile } = require('child_process');
-const { promisify } = require('util');
-
-const execFileSync = promisify(execFile);
+import path from 'path';
+import fs from 'fs';
+// @ts-ignore
+import glyphs from '../../node_modules/glyph-pbf-composite/index';
+import { execFile } from 'child_process';
 
 const tmpDir = path.resolve(__dirname, 'tmp/');
 const dist = path.resolve(__dirname, '../../dist');
@@ -29,7 +27,11 @@ const fontsDirs = [
 
 const fontsDirsAll = [...fontsDirs, 'NotoSans-CondensedLightItalic'];
 
-const readPbfsFilesToCombine = (tmpDir, fontsDirs, range) => {
+const readPbfsFilesToCombine = (
+  tmpDir: string,
+  fontsDirs: string[],
+  range: string,
+) => {
   const pbfsFiles = [];
   for (let i = 0; i < fontsDirs.length; ++i) {
     const pbfFilePath = tmpDir + '/' + fontsDirs[i] + '/' + range + '.pbf';
@@ -38,36 +40,36 @@ const readPbfsFilesToCombine = (tmpDir, fontsDirs, range) => {
   return pbfsFiles;
 };
 
-const buildGlyphs = async () => {
-  for (const file of fontsDirsAll) {
-    const tmpPath = path.resolve(tmpDir, file);
-    if (!fs.existsSync(tmpPath)) fs.mkdirSync(tmpPath);
-    await execFileSync(
-      path.resolve(__dirname, '../../node_modules/.bin/build-glyphs'),
-      [
-        path.resolve(__dirname, 'inputs', file + '.ttf'),
-        path.resolve(tmpDir, file),
-      ],
-      error => {
-        if (error) throw error;
-      },
-    );
-  }
-};
-
-buildGlyphs();
-
-for (let i = 0; i < 65536; i = i + 256) {
-  const range = i + '-' + Math.min(i + 255, 65535);
-  const pbfsToCombine = readPbfsFilesToCombine(tmpDir, fontsDirs, range);
-  const combinedGlyphs = glyphs.combine(pbfsToCombine, fontsDirs.toString());
-  fs.writeFileSync(outputDir + '/' + range + '.pbf', combinedGlyphs);
+for (const file of fontsDirsAll) {
+  const tmpPath = path.resolve(tmpDir, file);
+  if (!fs.existsSync(tmpPath)) fs.mkdirSync(tmpPath);
+  execFile(
+    path.resolve(__dirname, '../../node_modules/.bin/build-glyphs'),
+    [
+      path.resolve(__dirname, 'inputs', file + '.ttf'),
+      path.resolve(tmpDir, file),
+    ],
+    error => {
+      if (error) throw error;
+    },
+  );
 }
 
-fs.copyFileSync(
-  path.resolve(tmpDir, 'NotoSans-CondensedLightItalic', '0-255.pbf'),
-  path.resolve(outputItalic, '0-255.pbf'),
-);
+setTimeout(() => {
+  for (let i = 0; i < 65536; i = i + 256) {
+    const range = i + '-' + Math.min(i + 255, 65535);
+    const pbfsToCombine = readPbfsFilesToCombine(tmpDir, fontsDirs, range);
+    const combinedGlyphs = glyphs.combine(pbfsToCombine, fontsDirs.toString());
+    fs.writeFileSync(outputDir + '/' + range + '.pbf', combinedGlyphs);
+  }
+
+  for (const file of ['0-255', '256-511']) {
+    fs.copyFileSync(
+      path.resolve(tmpDir, 'NotoSans-CondensedLightItalic', file + '.pbf'),
+      path.resolve(outputItalic, file + '.pbf'),
+    );
+  }
+}, 5000);
 
 // 0-255.pbf: Basic Latin & Latin-1 Supplement
 // 256-511.pbf: Latin Extended-A

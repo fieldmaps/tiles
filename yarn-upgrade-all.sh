@@ -3,11 +3,17 @@ yarn add \
   @turf/turf \
   d3-dsv \
   fontnik \
+  glob \
   glyph-pbf-composite \
   polylabel \
-  tippecanoe
+  tippecanoe \
+  ts-node
 
 yarn add --dev \
-  svgo
+  @types/d3-dsv \
+  @types/glob \
+  @types/node \
+  @types/polylabel \
+  typescript
 
 yarn upgrade
