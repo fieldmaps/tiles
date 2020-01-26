@@ -11,11 +11,13 @@ const data = csvParse(
 const styleTypes: any = [['default', defaultStyle]];
 
 const prod = path.resolve(__dirname, '../../dist');
-const local = path.resolve(__dirname, '../../local');
+const localDev = path.resolve(__dirname, '../../local-dev');
+const localProd = path.resolve(__dirname, '../../local-prod');
 
 const origins = [
   ['https://atlas.fieldmaps.io', prod],
-  ['http://localhost:8000', local],
+  ['http://localhost:8000', localDev],
+  ['http://localhost:9000', localProd],
 ];
 
 for (const [origin, dist] of origins) {
@@ -25,8 +27,8 @@ for (const [origin, dist] of origins) {
   for (const [dir, func] of styleTypes) {
     for (const row of data) {
       const style = func(origin, row);
-      const output = path.resolve(distDir, dir);
-      const jsonPath = path.resolve(output, row.iso_3 + '.json');
+      const output = path.resolve(distDir, row.iso_3 || '');
+      const jsonPath = path.resolve(output, dir + '.json');
       if (!fs.existsSync(output)) fs.mkdirSync(output);
       fs.writeFileSync(jsonPath, JSON.stringify(style));
     }

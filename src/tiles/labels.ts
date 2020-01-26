@@ -1,7 +1,7 @@
 import polylabel from 'polylabel';
 import fs from 'fs';
 import path from 'path';
-import turf from '@turf/turf';
+import * as turf from '@turf/turf';
 import { csvParse } from 'd3-dsv';
 
 const inputDir = path.resolve(__dirname, 'inputs', 'features');
@@ -38,7 +38,6 @@ const getLargestPolygon = (geometry: any) => {
 };
 
 for (const row of data) {
-  console.log(row.iso_3);
   for (const label of labels) {
     const outputDir = path.resolve(tmpDir, row.iso_3);
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);

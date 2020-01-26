@@ -9,12 +9,15 @@
     "node": "10"
   },
   "scripts": {
-    "compress": "cd dist && tar --exclude='*.DS_Store' -zcf atlas-styles.tar.gz fonts sprites styles tiles",
+    "compress": "rm -f atlas-styles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf atlas-styles.tar.gz fonts sprites styles tiles",
     "extract": "tar -xf dist/atlas-styles.tar.gz --directory static",
     "fonts": "rm -rf dist/fonts && ts-node src/fonts && rm -rf src/fonts/tmp",
-    "labels": "ts-node src/tiles/labels.js",
+    "labels": "ts-node src/tiles/labels.ts",
+    "search": "ts-node src/tiles/search.ts && rm -rf ../atlas-maps/static/search && cp -rf local/search ../atlas-maps/static/search",
     "sprites": "rm -rf dist/sprites && ts-node src/sprites",
-    "styles": "rm -rf dist/styles && rm -rf local/styles && ts-node src/styles",
+    "styles": "rm -rf dist/styles && rm -rf local-dev/styles && rm -rf local-prod/styles && ts-node src/styles",
+    "styles-dev": "yarn styles && rm -rf ../atlas-maps/static/styles && cp -rf local-dev/styles ../atlas-maps/static/styles",
+    "styles-prod": "yarn styles && rm -rf ../atlas-maps/static/styles && cp -rf local-prod/styles ../atlas-maps/static/styles",
     "sync": "aws s3 sync dist s3://fieldmaps-atlas --exclude '*.DS_Store'",
     "sync-rm": "aws s3 rm s3://fieldmaps-atlas --recursive --exclude '*' --include '*.DS_Store'",
     "tiles": "rm -rf src/tiles/tmp && rm -rf dist/tiles && ts-node src/tiles && rm -rf src/tiles/tmp"
@@ -27,8 +30,7 @@
     "glob": "^7.1.6",
     "glyph-pbf-composite": "^0.0.2",
     "polylabel": "^1.0.2",
-    "tippecanoe": "^0.5.0",
-    "ts-node": "^8.6.2"
+    "tippecanoe": "^0.5.0"
   },
   "devDependencies": {
     "@types/d3-dsv": "^1.0.36",
@@ -36,6 +38,7 @@
     "@types/node": "^13.5.0",
     "@types/polylabel": "^1.0.5",
     "svgo": "^1.3.2",
+    "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
   }
 }

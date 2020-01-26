@@ -54,24 +54,22 @@ const labels = [
   ['features', 'settlements.geojson'],
 ];
 
+const settlementTypes = [1, 2, 3, 4, 5, 'city', 'town'];
+
 const getFeatureParams = (dir: string) => ({
-  maximumZoom: 'g',
   detectSharedBorders: true,
+  featureFilter: { settlements: ['!in', 'type', settlementTypes] },
+  maximumZoom: 'g',
   noTileSizeLimit: true,
-  simplifyOnlyLowZooms: true,
   output: path.resolve(tmpFeatureDir, dir),
-  featureFilter: {
-    settlements: ['!in', 'type', 1, 2, 3, 4, 5, 'city', 'town'],
-  },
+  simplifyOnlyLowZooms: true,
 });
 
 const getLabelParams = (dir: string, maxzoom: number) => ({
-  maximumZoom: maxzoom,
   dropRate: 1,
+  featureFilter: { settlements: ['in', 'type', settlementTypes] },
+  maximumZoom: maxzoom,
   output: path.resolve(tmpLabelDir, dir),
-  featureFilter: {
-    settlements: ['in', 'type', 1, 2, 3, 4, 5, 'city', 'town'],
-  },
 });
 
 for (const row of data) {

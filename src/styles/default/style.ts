@@ -7,6 +7,78 @@ const filters = {
   settlements6: ['!in', 'type', 1, 2, 3, 4, 5, 'city', 'town'],
 };
 
+const iconTextLayout = {
+  'text-anchor': 'top',
+  'text-field': '{name}',
+  'text-font': ['noto-sans-condensed-light'],
+  'text-radial-offset': 1,
+  'text-optional': true,
+  'text-size': 12,
+};
+
+const iconTextPaint = {
+  'text-halo-color': 'rgba(255, 255, 255, 0.9)',
+  'text-halo-width': 1.5,
+};
+
+const singleIcon = (iconId: string, iconMinzoom: number, iconImage: string) => [
+  {
+    id: iconId + '-1',
+    minzoom: iconMinzoom,
+    layout: {
+      'icon-image': iconImage,
+    },
+    source: 'fieldmaps',
+    'source-layer': iconId.replace('-', ''),
+    type: 'symbol',
+  },
+  {
+    id: iconId + '-2',
+    minzoom: iconMinzoom + 2,
+    layout: {
+      'icon-image': iconImage,
+      ...iconTextLayout,
+    },
+    paint: iconTextPaint,
+    source: 'fieldmaps',
+    'source-layer': iconId.replace('-', ''),
+    type: 'symbol',
+  },
+];
+
+const multiIcon = (
+  iconFilter: any[],
+  iconId: string,
+  iconMinzoom: number,
+  iconImage: string,
+  iconSource: string,
+) => [
+  {
+    filter: iconFilter,
+    id: iconId + '-1',
+    minzoom: iconMinzoom,
+    layout: {
+      'icon-image': iconImage,
+    },
+    source: 'fieldmaps',
+    'source-layer': iconSource,
+    type: 'symbol',
+  },
+  {
+    filter: iconFilter,
+    id: iconId + '-2',
+    minzoom: iconMinzoom + 2,
+    layout: {
+      'icon-image': iconImage,
+      ...iconTextLayout,
+    },
+    paint: iconTextPaint,
+    source: 'fieldmaps',
+    'source-layer': iconSource,
+    type: 'symbol',
+  },
+];
+
 export default (origin: string, stops: any, row: any) => ({
   version: 8,
   name: 'Atlas Default',
@@ -131,81 +203,29 @@ export default (origin: string, stops: any, row: any) => ({
         'line-width': { stops: stops.admin2, base: 2 },
       },
     },
-    {
-      id: 'sea-ports-2',
-      minzoom: stops.seaPorts1[1][0],
-      layout: {
-        'icon-image': 'ferry-11',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'seaports',
-      type: 'symbol',
-    },
-    {
-      id: 'sea-ports-1',
-      maxzoom: stops.seaPorts1[1][0],
-      paint: {
-        'circle-color': '#000000',
-        'circle-radius': { stops: stops.seaPorts1, base: 2 },
-        'circle-stroke-width': 1,
-        'circle-stroke-color': 'rgba(255, 255, 255, 0.9)',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'seaports',
-      type: 'circle',
-    },
-    {
-      filter: ['==', 'type', 'helipad'],
-      id: 'airports-3',
-      minzoom: stops.airports1[1][0],
-      layout: {
-        'icon-image': 'heliport-11',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'airports',
-      type: 'symbol',
-    },
-    {
-      filter: ['!=', 'type', 'helipad'],
-      id: 'airports-2',
-      minzoom: stops.airports1[1][0],
-      layout: {
-        'icon-image': 'airport-11',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'airports',
-      type: 'symbol',
-    },
-    {
-      id: 'financial-services-2',
-      minzoom: stops.financialServices1[1][0],
-      layout: {
-        'icon-image': 'bank-11',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'financialservices',
-      type: 'symbol',
-    },
-    {
-      id: 'education-facilities-2',
-      minzoom: stops.educationFacilities1[1][0],
-      layout: {
-        'icon-image': 'college-11',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'educationfacilities',
-      type: 'symbol',
-    },
-    {
-      id: 'health-facilities-2',
-      minzoom: stops.healthFacilities1[1][0],
-      layout: {
-        'icon-image': 'hospital-11',
-      },
-      source: 'fieldmaps',
-      'source-layer': 'healthfacilities',
-      type: 'symbol',
-    },
+    ...singleIcon('sea-ports', stops.seaPorts1[1][0], 'ferry-11'),
+    ...multiIcon(
+      ['==', 'type', 'helipad'],
+      'heliports',
+      stops.airports1[1][0] + 1,
+      'heliport-11',
+      'airports',
+    ),
+    ...singleIcon(
+      'financial-services',
+      stops.financialServices1[1][0],
+      'bank-11',
+    ),
+    ...singleIcon(
+      'education-facilities',
+      stops.educationFacilities1[1][0],
+      'college-11',
+    ),
+    ...singleIcon(
+      'health-facilities',
+      stops.healthFacilities1[1][0],
+      'hospital-11',
+    ),
     {
       filter: filters.settlements6,
       id: 'settlements-6',
@@ -220,6 +240,13 @@ export default (origin: string, stops: any, row: any) => ({
       'source-layer': 'settlements',
       type: 'circle',
     },
+    ...multiIcon(
+      ['!=', 'type', 'helipad'],
+      'airports',
+      stops.airports1[1][0],
+      'airport-11',
+      'airports',
+    ),
     {
       filter: filters.settlements5,
       id: 'settlements-5',

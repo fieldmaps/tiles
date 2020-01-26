@@ -6,14 +6,15 @@ yarn add \
   glob \
   glyph-pbf-composite \
   polylabel \
-  tippecanoe \
-  ts-node
+  tippecanoe
 
 yarn add --dev \
   @types/d3-dsv \
   @types/glob \
   @types/node \
   @types/polylabel \
+  svgo \
+  ts-node \
   typescript
 
 yarn upgrade

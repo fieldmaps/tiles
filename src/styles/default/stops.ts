@@ -37,7 +37,7 @@ export default (n: number) => ({
   ],
   airports1: [
     [n, 0],
-    [n + 5, 3],
+    [n + 3, 3],
   ],
   financialServices1: [
     [n, 0],
