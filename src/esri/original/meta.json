@@ -1,0 +1,510 @@
+
+{
+	"vector_layers": [{
+		"id": "admin0",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String"
+		}
+	}, {
+		"id": "admin0labels",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String"
+		}
+	}, {
+		"id": "admin1",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String"
+		}
+	}, {
+		"id": "admin1labels",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String"
+		}
+	}, {
+		"id": "admin2",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String"
+		}
+	}, {
+		"id": "admin2labels",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String"
+		}
+	}, {
+		"id": "airports",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "educationfacilities",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "financialservices",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "healthfacilities",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"emergency": "String",
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "lakes",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "protectedareas",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "protectedareaslabels",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "railways",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "rivers",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "roads",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "seaports",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"type": "String"
+		}
+	}, {
+		"id": "settlements",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String",
+			"pcode": "String",
+			"type": "Number"
+		}
+	}, {
+		"id": "undeterminedareas",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String"
+		}
+	}, {
+		"id": "undeterminedareaslabels",
+		"description": "",
+		"minzoom": 0,
+		"maxzoom": 9,
+		"fields": {
+			"name": "String"
+		}
+	}],
+	"tilestats": {
+		"layerCount": 20,
+		"layers": [{
+			"layer": "admin0",
+			"count": 217,
+			"geometry": "Polygon",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 1,
+				"type": "string",
+				"values": ["South Sudan"]
+			}, {
+				"attribute": "pcode",
+				"count": 1,
+				"type": "string",
+				"values": ["SS"]
+			}]
+		}, {
+			"layer": "admin0labels",
+			"count": 10,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 1,
+				"type": "string",
+				"values": ["South Sudan"]
+			}, {
+				"attribute": "pcode",
+				"count": 1,
+				"type": "string",
+				"values": ["SS"]
+			}]
+		}, {
+			"layer": "admin1",
+			"count": 424,
+			"geometry": "Polygon",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 10,
+				"type": "string",
+				"values": ["Central Equatoria", "Eastern Equatoria", "Jonglei", "Lakes", "Northern Bahr el Ghazal", "Unity", "Upper Nile", "Warrap", "Western Bahr el Ghazal", "Western Equatoria"]
+			}, {
+				"attribute": "pcode",
+				"count": 10,
+				"type": "string",
+				"values": ["SS01", "SS02", "SS03", "SS04", "SS05", "SS06", "SS07", "SS08", "SS09", "SS10"]
+			}]
+		}, {
+			"layer": "admin1labels",
+			"count": 103,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 10,
+				"type": "string",
+				"values": ["Central Equatoria", "Eastern Equatoria", "Jonglei", "Lakes", "Northern Bahr el Ghazal", "Unity", "Upper Nile", "Warrap", "Western Bahr el Ghazal", "Western Equatoria"]
+			}, {
+				"attribute": "pcode",
+				"count": 10,
+				"type": "string",
+				"values": ["SS01", "SS02", "SS03", "SS04", "SS05", "SS06", "SS07", "SS08", "SS09", "SS10"]
+			}]
+		}, {
+			"layer": "admin2",
+			"count": 1429,
+			"geometry": "Polygon",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 78,
+				"type": "string",
+				"values": ["Abiemnhom", "Akobo", "Aweil Centre", "Aweil East", "Aweil North", "Aweil South", "Aweil West", "Awerial", "Ayod", "Baliet", "Bor South", "Budi", "Canal/Pigi", "Cueibet", "Duk", "Ezo", "Fangak", "Fashoda", "Gogrial East", "Gogrial West", "Guit", "Ibba", "Ikotos", "Juba", "Jur River", "Kajo-keji", "Kapoeta East", "Kapoeta North", "Kapoeta South", "Koch", "Lafon", "Lainya", "Leer", "Longochuk", "Luakpiny/Nasir", "Maban", "Magwi", "Maiwut", "Malakal", "Manyo", "Maridi", "Mayendit", "Mayom", "Melut", "Morobo", "Mundri East", "Mundri West", "Mvolo", "Nagero", "Nyirol", "Nzara", "Panyijiar", "Panyikang", "Pariang", "Pibor", "Pochalla", "Raja", "Renk", "Rubkona", "Rumbek Centre", "Rumbek East", "Rumbek North", "Tambura", "Terekeka", "Tonj East", "Tonj North", "Tonj South", "Torit", "Twic", "Twic East", "Ulang", "Uror", "Wau", "Wulu", "Yambio", "Yei", "Yirol East", "Yirol West"]
+			}, {
+				"attribute": "pcode",
+				"count": 78,
+				"type": "string",
+				"values": ["SS0101", "SS0102", "SS0103", "SS0104", "SS0105", "SS0106", "SS0201", "SS0202", "SS0203", "SS0204", "SS0205", "SS0206", "SS0207", "SS0208", "SS0301", "SS0302", "SS0303", "SS0304", "SS0305", "SS0306", "SS0307", "SS0308", "SS0309", "SS0310", "SS0311", "SS0401", "SS0402", "SS0403", "SS0404", "SS0405", "SS0406", "SS0407", "SS0408", "SS0501", "SS0502", "SS0503", "SS0504", "SS0505", "SS0601", "SS0602", "SS0603", "SS0604", "SS0605", "SS0606", "SS0607", "SS0608", "SS0609", "SS0701", "SS0702", "SS0703", "SS0704", "SS0705", "SS0706", "SS0707", "SS0708", "SS0709", "SS0710", "SS0711", "SS0712", "SS0801", "SS0802", "SS0803", "SS0804", "SS0805", "SS0806", "SS0901", "SS0902", "SS0903", "SS1001", "SS1002", "SS1003", "SS1004", "SS1005", "SS1006", "SS1007", "SS1008", "SS1009", "SS1010"]
+			}]
+		}, {
+			"layer": "admin2labels",
+			"count": 805,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 78,
+				"type": "string",
+				"values": ["Abiemnhom", "Akobo", "Aweil Centre", "Aweil East", "Aweil North", "Aweil South", "Aweil West", "Awerial", "Ayod", "Baliet", "Bor South", "Budi", "Canal/Pigi", "Cueibet", "Duk", "Ezo", "Fangak", "Fashoda", "Gogrial East", "Gogrial West", "Guit", "Ibba", "Ikotos", "Juba", "Jur River", "Kajo-keji", "Kapoeta East", "Kapoeta North", "Kapoeta South", "Koch", "Lafon", "Lainya", "Leer", "Longochuk", "Luakpiny/Nasir", "Maban", "Magwi", "Maiwut", "Malakal", "Manyo", "Maridi", "Mayendit", "Mayom", "Melut", "Morobo", "Mundri East", "Mundri West", "Mvolo", "Nagero", "Nyirol", "Nzara", "Panyijiar", "Panyikang", "Pariang", "Pibor", "Pochalla", "Raja", "Renk", "Rubkona", "Rumbek Centre", "Rumbek East", "Rumbek North", "Tambura", "Terekeka", "Tonj East", "Tonj North", "Tonj South", "Torit", "Twic", "Twic East", "Ulang", "Uror", "Wau", "Wulu", "Yambio", "Yei", "Yirol East", "Yirol West"]
+			}, {
+				"attribute": "pcode",
+				"count": 78,
+				"type": "string",
+				"values": ["SS0101", "SS0102", "SS0103", "SS0104", "SS0105", "SS0106", "SS0201", "SS0202", "SS0203", "SS0204", "SS0205", "SS0206", "SS0207", "SS0208", "SS0301", "SS0302", "SS0303", "SS0304", "SS0305", "SS0306", "SS0307", "SS0308", "SS0309", "SS0310", "SS0311", "SS0401", "SS0402", "SS0403", "SS0404", "SS0405", "SS0406", "SS0407", "SS0408", "SS0501", "SS0502", "SS0503", "SS0504", "SS0505", "SS0601", "SS0602", "SS0603", "SS0604", "SS0605", "SS0606", "SS0607", "SS0608", "SS0609", "SS0701", "SS0702", "SS0703", "SS0704", "SS0705", "SS0706", "SS0707", "SS0708", "SS0709", "SS0710", "SS0711", "SS0712", "SS0801", "SS0802", "SS0803", "SS0804", "SS0805", "SS0806", "SS0901", "SS0902", "SS0903", "SS1001", "SS1002", "SS1003", "SS1004", "SS1005", "SS1006", "SS1007", "SS1008", "SS1009", "SS1010"]
+			}]
+		}, {
+			"layer": "airports",
+			"count": 686,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 347,
+				"type": "string",
+				"values": ["", "Abdraman", "Abiemnom", "Abieth", "Abmju", "Abon", "Abuong", "Aburoc", "Abuyong", "Achilbong", "Acumcum", "Adar Yel Airstrip", "Adet", "Adior", "Adok", "Adongo", "Agaigai", "Agangrial", "Ager", "Agugo", "Agur", "Ajak", "Ajakuac", "Akak", "Akoc", "Akon", "Akop", "Akot", "Akuem", "Al Ali", "Alam", "Alcool", "Alek", "Alek 1", "Alek 2 New", "Alek 3", "Aliek", "Alongdior", "Alpha", "Aluak luak", "Alur", "Ameth", "Amou", "Anyal Chol", "Ariath", "Aroyo", "Atar", "Atar Badodi", "Athidwey", "Atukuel", "Aweil Airport", "Aweng", "Awerial", "Awoda airstrip", "Ayien", "Ayod", "Ayod New", "Baar", "Baau", "Banya", "Bararud", "Bauw", "Beneshowa", "Bentiu", "Bieh", "Bil", "Billing", "Boma airstrip", "Bowac", "Brong", "Bukteng", "Bunagok", "Buong", "Buoth", "Burmath", "Chaang", "Chaiban", "Chelkou", "Chogonok", "Chotbora", "Chuei", "Chuil", "Chukudum Airstrip", "Cona", "Cuibet", "Dablual", "Daga", "Dar Petroleum VIP Helipad", "Darjo", "Dhiak Kuei", "Diem Zubeir", "Dinkar", "Dor", "Doro", "Duar", "Duar(Oil Field)", "Duk Fadiet", "Fathai", "Gaireng", "Ganda"]
+			}, {
+				"attribute": "type",
+				"count": 2,
+				"type": "string",
+				"values": ["aerodrome", "helipad"]
+			}]
+		}, {
+			"layer": "educationfacilities",
+			"count": 150,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 61,
+				"type": "string",
+				"values": ["", "Aciek Agriculture Training centre", "Adotic primary school", "Akande Primary School", "Akuem primary School", "Alero School", "Athian p school", "Baac p school", "Benagoro Primary School", "Bor A Primary School", "Bor B Primary School", "CWEP ITC", "Catholic University of South Sudan", "Crop Training Centre (CTC)", "Fataha Primary School", "Halbul primary school", "Immanuel Primary School", "Immanuel Secondary School", "Joseph Gasi Secondary School", "Juba Diocesan Model Secondary School", "Kai Gai Primary", "King primary school yei", "Lekuangole Primary School", "Light house school", "Limidia High Secondary School", "Limidia Primary School", "Lokopio Primary School", "Majak p. Sch", "Majak p. School", "Majak primary school", "Makuen Agap p. school", "Malek Senior Secondary School", "Malualbai p school", "Masiya Nursery & Primary School", "Mentor primary school", "Mugumbe Primary School", "Nabima Primary School", "Obero Primary School", "Okoi Primary School", "Omdurman p school", "Partial p school", "Peremasu School", "Riangmal primary school", "Romogi Seed Secondary School", "Royal Junior Primary School", "Rubeke P school", "Rubeke p school", "Rubeke primary school otogo pam", "Rubeke s s", "Rumaker p school", "Rumbek University", "Saint Mary", "St. Joseph Basic School", "University", "University of Juba", "University of Juba.College of comunity Studies and rural development", "Uyon primary sch", "Yabongo Girls", "Yambio Secondary School", "Yei Day Secondary School", "jebel church"]
+			}, {
+				"attribute": "type",
+				"count": 3,
+				"type": "string",
+				"values": ["college", "school", "university"]
+			}]
+		}, {
+			"layer": "financialservices",
+			"count": 34,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 8,
+				"type": "string",
+				"values": ["", "Alpha Commercial Bank", "Equity Bank", "KCB Bank", "KCB Kenya Commercial Bank", "Qatar National Bank", "STANBIC Bank", "Stanbic"]
+			}, {
+				"attribute": "type",
+				"count": 3,
+				"type": "string",
+				"values": ["atm", "bank", "post_office"]
+			}]
+		}, {
+			"layer": "healthfacilities",
+			"count": 319,
+			"geometry": "Point",
+			"attributeCount": 3,
+			"attributes": [{
+				"attribute": "emergency",
+				"count": 2,
+				"type": "string",
+				"values": ["no", "yes"]
+			}, {
+				"attribute": "name",
+				"count": 131,
+				"type": "string",
+				"values": ["", "36.6", "AAA hospital", "Adok Health Post", "Agok Hospital", "Airport Clinic", "Akewich PHCU", "Antipas Pharmacy", "Arroyo PHCC", "Atuet phcu", "Aweil Civil Hospital", "Awoda Primary Health Care Centre", "BUNJ HOSPITAL", "Bahr El Ghazal clinic", "Bentiu hospital", "Bulluk Eye Clinic", "Bunj Hospital", "Care Plus clinic", "Chiness Hospital", "Comboni Hospital", "Continental Whole Sale Pharmacy", "Da Genesis", "Dabluai Primary Healthcare Unit", "Dablual Primary Healthcare Centre", "Dispensary", "Doma Primary Health Care Centre", "EPC Clinic Yei", "Egyptian Clinic", "Fc Hospital", "GOAL Health Center", "GUDELE  SURGICAL CLINIC", "Gabot Health Center", "Ganyliel", "Gok Machar PHCC", "Goli Hospital", "Hai jebel primary health care unit", "High Court & Judiciary", "His House of Hope", "Hospital gouvernemental", "Jaguar Primary Healthcare Unit", "Juba Civil Hospital", "Kampala International clinic", "Koch Primary Healthcare Centre", "Kuok Primary Healthcare Unit", "Lakes State Hospital", "Liap PHCU", "Life Bridge Pharmacy", "Local Dispensary", "Lotimor clinic", "Lou Specialized Clinic", "Lui Hospital", "MRDC Clinic", "MSF Gumuruk PHCU", "MSF Health Center", "MSF Hospital", "MSF Lekuangole PHCC", "MSF hospital", "Majak Kaar PHCC", "Malakia Health Center", "Malek Alel PHCU", "Malualkon PHCC", "Martha Clinic", "Masiya Pharmacy", "Mawien Dit clinic", "Mayen Ulem PHCC", "Medair Abayok PHCU", "Medi care Health Clinic", "Medicines Sans Frontieres Lankien", "Melut Hospital", "Military Hospital", "Ministry of Health", "Ministry of Health(Bor Hospital)", "Mir Mir PHC", "Mir Mir PHU", "MoH/Unido Clinic", "Modit Feeding Centre", "Mundri Health Center", "Munuki Health Centre", "Médecins Sans Frontières", "Médecins Sans Frontières (MSF): Feeding Centre", "Médecins Sans Frontières (MSF): Hospital (destroyed in 2016)", "NASIR HOSPITAL MSF (until 2015)", "Nagishot Clinic", "Nimra Talata Medical Complex", "Nyakuron Health Center", "Nyamlell PHCC", "Padiek Feeding Centre", "Panthou PHCC", "Payawa PHCU", "Pillieny PHU", "Pillieny Primary Health Care Unit", "Police Hospital", "Primary Health Care Center", "Pulchuol Feeding Centre", "Queens Medical Clinic", "Queens Pharmacy", "Renk Civil Hospital", "Renk Military Hospital", "Riang Angon PHCU", "Rony PHCU"]
+			}, {
+				"attribute": "type",
+				"count": 4,
+				"type": "string",
+				"values": ["clinic", "doctors", "hospital", "pharmacy"]
+			}]
+		}, {
+			"layer": "lakes",
+			"count": 409,
+			"geometry": "Polygon",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 29,
+				"type": "string",
+				"values": ["", "Frasers Lake 2", "Frasers Lake 4", "Gel", "Hafir", "Lago", "Lago Benjamín", "Lago Ubales", "Lagon Iván Arias", "Lagón", "Lake Abiad (Jau)", "Lake Ambadi", "Lake Kerrita", "Lake Munideng", "Lake No", "Lake Shambe", "Lake Tayer", "Lake Yirol", "Lakey Mc Lakeface", "Lankien Swamp", "Lol River", "Lower Ibba", "Nyambor Hafir", "Pond", "Singaita River", "Sudd", "Upper Ibba", "marais", "النيل الأبيض"]
+			}, {
+				"attribute": "type",
+				"count": 2,
+				"type": "string",
+				"values": ["water", "wetland"]
+			}]
+		}, {
+			"layer": "protectedareas",
+			"count": 387,
+			"geometry": "Polygon",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 24,
+				"type": "string",
+				"values": ["Ashana", "Badingilo", "Badingilo Extension", "Bangangai", "Bire Kapatuos", "Boma", "Boma Extension", "Boro", "Chelkou", "Fanyikang", "Imatong", "Juba", "Kidepo", "Lantoto", "Loelle", "Mbarizunga", "Meshra", "Nimule", "Nimule Buffer Zone", "Numatina", "Shambe", "Southern", "Sudd", "Zeraf"]
+			}, {
+				"attribute": "type",
+				"count": 4,
+				"type": "string",
+				"values": ["Forest Reserve", "Game Reserve", "National Park", "Ramsar Site, Wetland of International Importance"]
+			}]
+		}, {
+			"layer": "protectedareaslabels",
+			"count": 253,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 24,
+				"type": "string",
+				"values": ["Ashana", "Badingilo", "Badingilo Extension", "Bangangai", "Bire Kapatuos", "Boma", "Boma Extension", "Boro", "Chelkou", "Fanyikang", "Imatong", "Juba", "Kidepo", "Lantoto", "Loelle", "Mbarizunga", "Meshra", "Nimule", "Nimule Buffer Zone", "Numatina", "Shambe", "Southern", "Sudd", "Zeraf"]
+			}, {
+				"attribute": "type",
+				"count": 4,
+				"type": "string",
+				"values": ["Forest Reserve", "Game Reserve", "National Park", "Ramsar Site, Wetland of International Importance"]
+			}]
+		}, {
+			"layer": "railways",
+			"count": 26,
+			"geometry": "LineString",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 2,
+				"type": "string",
+				"values": ["", "Babanusa-Wau railway"]
+			}, {
+				"attribute": "type",
+				"count": 1,
+				"type": "string",
+				"values": ["rail"]
+			}]
+		}, {
+			"layer": "rivers",
+			"count": 1267,
+			"geometry": "LineString",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 81,
+				"type": "string",
+				"values": ["", "Achwa", "Agwei", "Ah mar", "Ahmar", "Albert Nile", "Bahr al 'Arab", "Bahr al 'Arab - بحر العرب", "Bahr al 'Arab ?", "Bahr al Ghazal", "Bahr al Jabal (Mountain Nile)", "Bahr al-Dschabal", "Bahr el Zeraf", "Bahr el-Ghazal", "Baro River", "Bellel", "Bo River", "Chel River", "Daga", "El-Samaa", "Gel", "Gumuruk", "Ibba", "Kaieris", "Kangen", "Kaniet Riveri (Baker 1862)", "Kaya River", "Kena River", "Khawr", "Khor Koss", "Kidepo", "Kobo", "Kong Kong", "Lankien Swamp", "Lol", "Lolabo", "Lomogol", "Lonanit", "Lopokotol", "Lotilla", "Loyuro", "Lul", "Maien", "Motot to Lankien Swamp", "Nahr al Jur", "Naiyena Epul", "Nalingakua", "Nanaam River", "Narus River", "Neubari", "Nyanding", "Oboth", "Pibor", "Pibor River", "Pibor River - ፒቦር ወንዝ", "R. Adar", "Raga River", "Rakaba Umm Bairo", "River", "River Fulus", "River Gel", "River Gulnam", "River Maridi", "River Rohl", "Singaita River", "Sobat", "Sobat River", "South Sudan - Ethiopia", "Tombak", "Ukathawa", "Wahko", "White Nile", "White Nile - النيل الأبيض", "Yabus", "Yei River", "Yembe", "Zeraf Cut 1", "النيل الأبيض", "بحر العرب", "بحر الغزال", "ባሮ ወንዝ"]
+			}, {
+				"attribute": "type",
+				"count": 1,
+				"type": "string",
+				"values": ["river"]
+			}]
+		}, {
+			"layer": "roads",
+			"count": 2853,
+			"geometry": "LineString",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 220,
+				"type": "string",
+				"values": ["", "12th Street", "28th Street", "Abu_Gebiha-Athidway", "Abyei-Ajackwac", "Abyei-Turalei", "Addis Ababa Road", "Adis Ababa Street", "Airport Drive", "Airport Road", "Ajackwac-Mayom", "Ajumani - Kajo Keji Road", "Akobo-Waat", "Akon-Akak", "Akon-Alek", "Akot-Mvolo", "Akot-Yirol", "Amadi-Kemande", "Amadi-Tali", "Aweil-Malualkon", "Awerial-Pakujiak", "Awerial-Tindalo", "Bentiu-Gogrial", "Bentiu-Leer", "Bilpam Road", "Bisellia-Wau", "Boma Road - Nyangachor", "Boma-Pibor", "Boma-Pochalla", "Bor-Mabior", "Bor-Pibor", "Busserri Street", "CPA Road", "Camp 15 - Chukudum", "Chukudum-Lotukei", "Congo Road", "Customs Road", "Customs Roundabout", "Dokul Bridge", "Doleib_Hill-Malakal", "Dr John Garang Road", "Duk_Padiet-Ayod", "Duk_Padiet-Waat", "El Salaam", "Ezo-Nagasi", "Ezo-Yangiri", "Ezo-Yubo", "Faraksika-Maridi", "Faraksika-Mundri", "Freedom Street", "Gaar Road (River Road)", "Gogrial - Abyei", "Gogrial - Warrab", "Gogrial-Abyei", "Gombura Street", "Gudele Road", "Gudele-MiaSaba Road", "Gudele-Munuki Roundabout", "Hai Cinema Road", "Hamia Road", "Happy Street", "High Mission Road", "Higlig-Bentiu", "Hyjamia Street", "Ikotos-Chukudum", "Ikotos-Uganda", "Imehejek-Lafon", "Independence Road", "Jaguar Road", "Jamam-Bunj Road", "Jambo-Lainya", "Jebel Road", "Jiath Bridge", "Juba - Kajo Keji", "Juba -KajoKeji Road", "Juba Bridge", "Juba Road", "Juba University Road", "Juba University Roundabout", "Juba-Kapoeta", "Juba-Kapoeta, Nimule Highway", "Juba-Lainya", "Juba-Mangalla", "Juba-Mundri", "Juba-Sindiru-Karpeto-Moli", "Juba-Sindiru-karpeto-Moli", "Juba-Terakeka", "Juba-Terakeka Road (Khor mobil)", "Juba-Terekeka Road (Khor Mobil)", "Juba-Yei New", "Kajo Keji-Yei", "Kajo-Keji-Moli", "Kakelay-Lotukei", "Kapoeta-Chukudum", "Kapoeta-Kassangor", "Kapoeta-Lauru", "Karenga-Torit Road", "Kassangor-Boma", "Kaya Road", "Kaya-Yei"]
+			}, {
+				"attribute": "type",
+				"count": 4,
+				"type": "string",
+				"values": ["primary", "secondary", "tertiary", "trunk"]
+			}]
+		}, {
+			"layer": "seaports",
+			"count": 19,
+			"geometry": "Point",
+			"attributeCount": 2,
+			"attributes": [{
+				"attribute": "name",
+				"count": 2,
+				"type": "string",
+				"values": ["", "Adok Ferry Terminal"]
+			}, {
+				"attribute": "type",
+				"count": 1,
+				"type": "string",
+				"values": ["ferry_terminal"]
+			}]
+		}, {
+			"layer": "settlements",
+			"count": 39475,
+			"geometry": "Point",
+			"attributeCount": 3,
+			"attributes": [{
+				"attribute": "name",
+				"count": 1000,
+				"type": "string",
+				"values": ["", "'Abd el Qadir", "'Abi", "'Aboni", "'Achag", "'Achop", "'Adayr", "'Agal", "'Alel", "'Ali Kordali", "'Aliab", "'Alley Boring", "'Aluot", "'Amyan", "'Angop", "'Aqer Weng", "'Aqol Donga", "'Aqot", "'Aradeyna", "'Arial", "'Arielwene", "'Atwel", "'Ayota", "'Ugara", "AKuei", "Aactach", "Aangari", "Aba Ping", "Ababanya", "Abadai", "Abaga", "Abagar", "Abaiat", "Abain", "Abaj", "Abaka", "Abang", "Abanganga", "Abanim", "Abanim Two", "Abanime", "Abanimo", "Abankou", "Abankouic", "Abar", "Abar Kau", "Abara", "Abarau", "Abarkou", "Abarkou Centre", "Abarnima", "Abarud", "Abatiar", "Abaya School", "Abayok", "Abbeit", "Abbi", "Abd Allah", "Abd El Lait", "Abd Er Rigal", "Abd Et Tam", "Abdesi", "Abdulla", "Abdullah", "Abdullah Kyango", "Abeek", "Abeer", "Abeer nhuom", "Abegak", "Abegi", "Abei", "Abeir", "Abeit", "Abel Cok", "Abel Mathon", "Abelek", "Aben Pur", "Aben-Nim(C)", "Abenyayo", "Abeo", "Aber", "Aber Nhom", "Abero", "Abeye", "Abeyi", "Abeyiel", "Abi", "Abiagyai", "Abiang Thii", "Abianyayo", "Abiar", "Abibil", "Abich", "Abidase", "Abiei Abuok", "Abieichengcuol", "Abiem", "Abiemnhom", "Abieth", "Abiey"]
+			}, {
+				"attribute": "pcode",
+				"count": 1000,
+				"type": "string",
+				"values": ["AO-0001", "AO-0002", "AO-0003", "AO-0004", "AO-0005", "AO-0006", "AO-0007", "AO-0008", "AO-0009", "AO-0010", "AO-0011", "AO-0012", "AO-0013", "AO-0014", "AO-0015", "AO-0016", "AO-0017", "AO-0018", "AO-0019", "AO-0020", "AO-0021", "AO-0022", "AO-0023", "AO-0024", "AO-0025", "AO-0026", "AO-0027", "AO-0028", "AO-0029", "AO-0030", "AO-0031", "AO-0032", "AO-0033", "AP-0001", "AP-0002", "AP-0003", "AP-0004", "AP-0005", "AP-0006", "AP-0007", "AP-0008", "AP-0009", "AP-0010", "AP-0011", "AP-0012", "AP-0013", "AP-0014", "AP-0015", "AP-0016", "AP-0017", "AP-0018", "AR-0001", "AR-0002", "AR-0003", "AR-0004", "AR-0005", "AR-0006", "AS-0001", "AS-0002", "AS-0003", "AS-0004", "AS-0005", "AS-0006", "AS-0007", "AS-0008", "AS-0009", "AS-0010", "AS-0011", "AU-0001", "AU-0002", "AU-0003", "AU-0004", "AU-0005", "AU-0006", "AU-0007", "AU-0008", "AU-0009", "AU-0010", "AU-0011", "AU-0012", "AU-0013", "AU-0014", "AU-0015", "AU-0016", "AU-0017", "AU-0018", "AU-0019", "AU-0020", "AU-0021", "AU-0022", "AU-0023", "AU-0024", "AU-0025", "AU-0026", "AU-0027", "AV-0001", "AV-0002", "AV-0003", "AV-0004", "AV-0005"]
+			}, {
+				"attribute": "type",
+				"count": 9,
+				"type": "number",
+				"values": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+				"min": 0,
+				"max": 8
+			}]
+		}, {
+			"layer": "undeterminedareas",
+			"count": 35,
+			"geometry": "Polygon",
+			"attributeCount": 1,
+			"attributes": [{
+				"attribute": "name",
+				"count": 2,
+				"type": "string",
+				"values": ["Abyei Region", "Ilemi Triangle"]
+			}]
+		}, {
+			"layer": "undeterminedareaslabels",
+			"count": 22,
+			"geometry": "Point",
+			"attributeCount": 1,
+			"attributes": [{
+				"attribute": "name",
+				"count": 2,
+				"type": "string",
+				"values": ["Abyei Region", "Ilemi Triangle"]
+			}]
+		}]
+	}
+}

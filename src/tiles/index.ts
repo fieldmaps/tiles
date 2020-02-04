@@ -11,7 +11,7 @@ const tmpDir = path.resolve(__dirname, 'tmp');
 const tmpFeatureDir = path.resolve(tmpDir, 'features');
 const tmpLabelDir = path.resolve(tmpDir, 'labels');
 const dist = path.resolve(__dirname, '../../dist');
-const distDir = path.resolve(dist, 'tiles');
+const distDir = path.resolve(dist, 'v4');
 
 if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
 if (!fs.existsSync(tmpFeatureDir)) fs.mkdirSync(tmpFeatureDir);
@@ -61,7 +61,7 @@ const getFeatureParams = (dir: string) => ({
   featureFilter: { settlements: ['!in', 'type', settlementTypes] },
   maximumZoom: 'g',
   noTileSizeLimit: true,
-  output: path.resolve(tmpFeatureDir, dir),
+  output: path.resolve(tmpFeatureDir, dir + '.mbtiles'),
   simplifyOnlyLowZooms: true,
 });
 
@@ -69,7 +69,8 @@ const getLabelParams = (dir: string, maxzoom: number) => ({
   dropRate: 1,
   featureFilter: { settlements: ['in', 'type', settlementTypes] },
   maximumZoom: maxzoom,
-  output: path.resolve(tmpLabelDir, dir),
+  noTileSizeLimit: true,
+  output: path.resolve(tmpLabelDir, dir + '.mbtiles'),
 });
 
 for (const row of data) {
@@ -87,8 +88,8 @@ for (const row of data) {
       '--no-tile-compression',
       '--no-tile-size-limit',
       '--output-to-directory=' + path.resolve(distDir, row.iso_3),
-      path.resolve(tmpFeatureDir, row.iso_3),
-      path.resolve(tmpLabelDir, row.iso_3),
+      path.resolve(tmpFeatureDir, row.iso_3 + '.mbtiles'),
+      path.resolve(tmpLabelDir, row.iso_3 + '.mbtiles'),
     ],
     (error: any) => {
       if (error) throw error;

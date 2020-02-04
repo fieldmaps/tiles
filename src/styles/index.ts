@@ -21,8 +21,10 @@ const origins = [
 ];
 
 for (const [origin, dist] of origins) {
-  const distDir = path.resolve(dist, 'styles');
+  const distTmpDir = path.resolve(dist, 'styles');
+  const distDir = path.resolve(distTmpDir, 'v1');
   if (!fs.existsSync(dist)) fs.mkdirSync(dist);
+  if (!fs.existsSync(distTmpDir)) fs.mkdirSync(distTmpDir);
   if (!fs.existsSync(distDir)) fs.mkdirSync(distDir);
   for (const [dir, func] of styleTypes) {
     for (const row of data) {

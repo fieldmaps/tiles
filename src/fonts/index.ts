@@ -6,12 +6,14 @@ import { execFile } from 'child_process';
 
 const tmpDir = path.resolve(__dirname, 'tmp/');
 const dist = path.resolve(__dirname, '../../dist');
-const distDir = path.resolve(dist, 'fonts');
+const distTmpDir = path.resolve(dist, 'fonts');
+const distDir = path.resolve(distTmpDir, 'v1');
 const outputDir = path.resolve(distDir, 'noto-sans-condensed-light');
 const outputItalic = path.resolve(distDir, 'noto-sans-condensed-light-italic');
 
 if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
 if (!fs.existsSync(dist)) fs.mkdirSync(dist);
+if (!fs.existsSync(distTmpDir)) fs.mkdirSync(distTmpDir);
 if (!fs.existsSync(distDir)) fs.mkdirSync(distDir);
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 if (!fs.existsSync(outputItalic)) fs.mkdirSync(outputItalic);
