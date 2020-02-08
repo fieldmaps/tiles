@@ -58,7 +58,7 @@ const settlementTypes = [1, 2, 3, 4, 5, 'city', 'town'];
 
 const getFeatureParams = (dir: string) => ({
   detectSharedBorders: true,
-  featureFilter: { settlements: ['!in', 'type', settlementTypes] },
+  featureFilter: { settlements: ['!in', 'type', ...settlementTypes] },
   maximumZoom: 'g',
   noTileSizeLimit: true,
   output: path.resolve(tmpFeatureDir, dir + '.mbtiles'),
@@ -67,7 +67,7 @@ const getFeatureParams = (dir: string) => ({
 
 const getLabelParams = (dir: string, maxzoom: number) => ({
   dropRate: 1,
-  featureFilter: { settlements: ['in', 'type', settlementTypes] },
+  featureFilter: { settlements: ['in', 'type', ...settlementTypes] },
   maximumZoom: maxzoom,
   noTileSizeLimit: true,
   output: path.resolve(tmpLabelDir, dir + '.mbtiles'),

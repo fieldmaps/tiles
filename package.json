@@ -1,7 +1,7 @@
 {
   "name": "styles",
-  "version": "1.0.0",
   "main": "index.js",
+  "version": "1.0.0",
   "repository": "https://github.com/fieldmaps/styles",
   "author": "Max Malynowsky <maxmalynowsky@gmail.com>",
   "license": "MIT",
@@ -9,7 +9,9 @@
     "node": "10"
   },
   "scripts": {
-    "compress": "rm -f atlas-styles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf atlas-styles.tar.gz fonts sprites styles v4",
+    "compress": "rm -f dist/atlas-styles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf atlas-styles.tar.gz fonts sprites styles v4",
+    "cp-dev": "yarn styles-dev && yarn tilejson-dev",
+    "cp-prod": "yarn styles-prod && yarn tilejson-prod",
     "extract": "tar -xf dist/atlas-styles.tar.gz --directory static",
     "fonts": "rm -rf dist/fonts && ts-node src/fonts && rm -rf src/fonts/tmp",
     "labels": "ts-node src/tiles/labels.ts",
@@ -20,8 +22,10 @@
     "styles-prod": "rm -rf ../atlas-maps/static/styles && cp -rf local-prod/styles ../atlas-maps/static/styles",
     "sync": "aws s3 sync dist s3://fieldmaps-atlas --exclude '*.DS_Store'",
     "sync-rm": "aws s3 rm s3://fieldmaps-atlas --recursive --exclude '*' --include '*.DS_Store'",
-    "tiles": "rm -rf src/tiles/tmp && ts-node src/tiles && rm -rf src/tiles/tmp",
-    "tilejson": "ts-node src/tilejson"
+    "tiles": "rm -rf dist/v4 && rm -rf src/tiles/tmp && ts-node src/tiles && yarn tilejson && rm -rf src/tiles/tmp",
+    "tilejson": "ts-node src/tilejson",
+    "tilejson-dev": "cp local-dev/v4/*.json ../atlas-maps/static/v4",
+    "tilejson-prod": "cp local-prod/v4/*.json ../atlas-maps/static/v4"
   },
   "dependencies": {
     "@mapbox/spritezero": "^6.2.0-dev",
@@ -36,7 +40,7 @@
   "devDependencies": {
     "@types/d3-dsv": "^1.0.36",
     "@types/glob": "^7.1.1",
-    "@types/node": "^13.5.0",
+    "@types/node": "^13.7.0",
     "@types/polylabel": "^1.0.5",
     "svgo": "^1.3.2",
     "ts-node": "^8.6.2",
