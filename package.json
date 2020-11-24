@@ -1,49 +1,30 @@
 {
-  "name": "styles",
+  "name": "atlas-styles",
   "main": "index.js",
   "version": "1.0.0",
   "repository": "https://github.com/fieldmaps/styles",
-  "author": "Max Malynowsky <maxmalynowsky@gmail.com>",
+  "author": "Max Malynowsky",
   "license": "MIT",
-  "engines": {
-    "node": "10"
-  },
   "scripts": {
-    "compress": "rm -f dist/atlas-styles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf atlas-styles.tar.gz fonts sprites styles v4",
-    "cp-dev": "yarn styles-dev && yarn tilejson-dev",
-    "cp-prod": "yarn styles-prod && yarn tilejson-prod",
-    "extract": "tar -xf dist/atlas-styles.tar.gz --directory static",
-    "fonts": "rm -rf dist/fonts && ts-node src/fonts && rm -rf src/fonts/tmp",
-    "labels": "ts-node src/tiles/labels.ts",
-    "search": "ts-node src/tiles/search.ts && rm -rf ../atlas-maps/static/search && cp -rf local/search ../atlas-maps/static/search",
-    "sprites": "rm -rf dist/sprites && ts-node src/sprites",
-    "styles": "rm -rf dist/styles && rm -rf local-dev/styles && rm -rf local-prod/styles && ts-node src/styles",
-    "styles-dev": "rm -rf ../atlas-maps/static/styles && cp -rf local-dev/styles ../atlas-maps/static/styles",
-    "styles-prod": "rm -rf ../atlas-maps/static/styles && cp -rf local-prod/styles ../atlas-maps/static/styles",
-    "sync": "aws s3 sync dist s3://fieldmaps-atlas --exclude '*.DS_Store'",
-    "sync-rm": "aws s3 rm s3://fieldmaps-atlas --recursive --exclude '*' --include '*.DS_Store'",
-    "tiles": "rm -rf dist/v4 && rm -rf src/tiles/tmp && ts-node src/tiles && yarn tilejson && rm -rf src/tiles/tmp",
-    "tilejson": "ts-node src/tilejson",
-    "tilejson-dev": "cp local-dev/v4/*.json ../atlas-maps/static/v4",
-    "tilejson-prod": "cp local-prod/v4/*.json ../atlas-maps/static/v4"
+    "tile-labels": "src/tile-labels/run.sh",
+    "tiles": "src/tiles/run.sh",
+    "serve": "http-server dist",
+    "sync": "s3cmd sync dist/ s3://fieldmapstiles/ --acl-public --delete-removed --exclude '.DS_Store'",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@mapbox/spritezero": "^6.2.0-dev",
     "@turf/turf": "^5.1.6",
-    "d3-dsv": "^1.2.0",
-    "fontnik": "^0.5.3",
-    "glob": "^7.1.6",
-    "glyph-pbf-composite": "^0.0.2",
-    "polylabel": "^1.0.2",
-    "tippecanoe": "^0.5.0"
+    "ndjson": "^2.0.0",
+    "polylabel": "^1.1.0",
+    "yargs": "^16.1.1"
   },
   "devDependencies": {
-    "@types/d3-dsv": "^1.0.36",
-    "@types/glob": "^7.1.1",
-    "@types/node": "^13.7.0",
+    "@types/ndjson": "^2.0.0",
     "@types/polylabel": "^1.0.5",
-    "svgo": "^1.3.2",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "@types/yargs": "^15.0.10",
+    "http-server": "^0.12.3",
+    "prettier": "^2.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
   }
 }
