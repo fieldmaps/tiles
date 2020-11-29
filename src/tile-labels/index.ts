@@ -1,6 +1,6 @@
-import polylabel from 'polylabel';
 import fs from 'fs';
 import path from 'path';
+import polylabel from 'polylabel';
 import * as turf from '@turf/turf';
 import ndjson from 'ndjson';
 import yargs from 'yargs';

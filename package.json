@@ -6,10 +6,14 @@
   "author": "Max Malynowsky",
   "license": "MIT",
   "scripts": {
+    "styles": "HOST=http://localhost:8080 ts-node src/styles",
+    "tile-json": "HOST=http://localhost:8080 ts-node src/tile-json",
     "tile-labels": "src/tile-labels/run.sh",
-    "tiles": "src/tiles/run.sh",
+    "tiles": "ts-node src/tiles/filter.ts && src/tiles/run.sh",
     "serve": "http-server dist",
-    "sync": "s3cmd sync dist/ s3://fieldmapstiles/ --acl-public --delete-removed --exclude '.DS_Store'",
+    "rm": "s3cmd rm s3://fieldmapstiles/ --force --recursive",
+    "put": "s3cmd put dist/* s3://fieldmapstiles/ --recursive --acl-public --exclude '.DS_Store'",
+    "sync": "s3cmd sync dist/ s3://fieldmapstiles/ --delete-removed --acl-public --exclude '.DS_Store'",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
@@ -23,7 +27,7 @@
     "@types/polylabel": "^1.0.5",
     "@types/yargs": "^15.0.10",
     "http-server": "^0.12.3",
-    "prettier": "^2.2.0",
+    "prettier": "^2.2.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"
   }
