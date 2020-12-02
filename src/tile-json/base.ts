@@ -8,7 +8,7 @@ export default {
   center: [0, 0, MAX_ZOOM],
   fillzoom: MAX_ZOOM,
   format: 'pbf',
-  id: 'wld_adm',
+  id: 'atlas',
   mapbox_logo: false,
   maskLevel: MAX_ZOOM,
   maxzoom: MAX_ZOOM,
@@ -16,5 +16,5 @@ export default {
   name: 'Atlas Default',
   scheme: 'xyz',
   tilejson: '2.2.0',
-  tiles: [`${HOST}/v4/wld_adm/{z}/{x}/{y}.pbf`],
+  tiles: [`${HOST}/v4/atlas/{z}/{x}/{y}.pbf`],
 };

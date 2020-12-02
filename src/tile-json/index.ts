@@ -6,7 +6,7 @@ import adminLines from './layers/admin-lines';
 import adminLabels from './layers/admin-labels';
 
 const outputDir = path.resolve(__dirname, '../../dist/v4');
-const output = path.resolve(outputDir, 'wld_adm.json');
+const output = path.resolve(outputDir, 'atlas.json');
 
 const tileJson = {
   ...base,

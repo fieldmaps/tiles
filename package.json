@@ -9,12 +9,18 @@
     "styles": "HOST=http://localhost:8080 ts-node src/styles",
     "tile-json": "HOST=http://localhost:8080 ts-node src/tile-json",
     "tile-labels": "src/tile-labels/run.sh",
-    "tiles": "ts-node src/tiles/filter.ts && src/tiles/run.sh",
+    "tile-filter": "ts-node src/tiles/filter.ts",
+    "tiles": "src/tiles/land.sh && src/tiles/adm-labels.sh && src/tiles/adm-lines.sh && src/tiles/tile-join.sh",
     "serve": "http-server dist",
     "rm": "s3cmd rm s3://fieldmapstiles/ --force --recursive",
     "put": "s3cmd put dist/* s3://fieldmapstiles/ --recursive --acl-public --exclude '.DS_Store'",
     "sync": "s3cmd sync dist/ s3://fieldmapstiles/ --delete-removed --acl-public --exclude '.DS_Store'",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "compress": "rm -f dist/tiles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf tiles.tar.gz fonts sprites styles v4",
+    "upload": "s3cmd put dist/tiles.tar.gz s3://fieldmapsdata/",
+    "download": "curl https://data.fieldmaps.io/tiles.tar.gz --output atlas-styles.tar.gz",
+    "extract": "tar -xf tiles.tar.gz --directory public && rm tiles.tar.gz",
+    "build": "yarn download && mkdir -p public && yarn extract"
   },
   "dependencies": {
     "@turf/turf": "^5.1.6",
@@ -25,7 +31,7 @@
   "devDependencies": {
     "@types/ndjson": "^2.0.0",
     "@types/polylabel": "^1.0.5",
-    "@types/yargs": "^15.0.10",
+    "@types/yargs": "^15.0.11",
     "http-server": "^0.12.3",
     "prettier": "^2.2.1",
     "ts-node": "^9.0.0",

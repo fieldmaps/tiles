@@ -8,8 +8,8 @@ export default [
   },
   {
     id: 'land',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm0',
+    source: 'atlas',
+    'source-layer': 'land',
     type: 'fill',
     paint: {
       'fill-color': '#FBF8F3',

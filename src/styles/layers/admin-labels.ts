@@ -1,8 +1,8 @@
 export default [
   {
-    id: 'wld_adm0_labels',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm0_labels',
+    id: 'adm0_labels',
+    source: 'atlas',
+    'source-layer': 'adm0_labels',
     type: 'symbol',
     layout: {
       'text-field': '{name1_0}',
@@ -18,9 +18,9 @@ export default [
     },
   },
   {
-    id: 'wld_adm1_labels',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm1_labels',
+    id: 'adm1_labels',
+    source: 'atlas',
+    'source-layer': 'adm1_labels',
     type: 'symbol',
     layout: {
       'text-field': '{name1_1}',
@@ -36,9 +36,9 @@ export default [
     },
   },
   {
-    id: 'wld_adm2_labels',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm2_labels',
+    id: 'adm2_labels',
+    source: 'atlas',
+    'source-layer': 'adm2_labels',
     type: 'symbol',
     layout: {
       'text-field': '{name1_2}',

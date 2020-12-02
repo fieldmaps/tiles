@@ -1,8 +1,25 @@
 export default [
   {
-    id: 'wld_adm0',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm0',
+    id: 'adm0_lines_disp',
+    source: 'atlas',
+    'source-layer': 'adm0_lines_disp',
+    type: 'line',
+    paint: {
+      'line-dasharray': [2, 2],
+      'line-color': 'black',
+      'line-width': {
+        stops: [
+          [0, 0],
+          [6, 2],
+        ],
+        base: 2,
+      },
+    },
+  },
+  {
+    id: 'adm0_lines',
+    source: 'atlas',
+    'source-layer': 'adm0_lines',
     type: 'line',
     paint: {
       'line-color': 'black',
@@ -16,9 +33,9 @@ export default [
     },
   },
   {
-    id: 'wld_adm1',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm1',
+    id: 'adm1_lines',
+    source: 'atlas',
+    'source-layer': 'adm1_lines',
     type: 'line',
     paint: {
       'line-color': 'black',
@@ -32,9 +49,9 @@ export default [
     },
   },
   {
-    id: 'wld_adm2',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm2',
+    id: 'adm2_lines',
+    source: 'atlas',
+    'source-layer': 'adm2_lines',
     type: 'line',
     paint: {
       'line-color': 'black',
@@ -48,9 +65,9 @@ export default [
     },
   },
   {
-    id: 'wld_adm3',
-    source: 'wld_adm',
-    'source-layer': 'wld_adm3',
+    id: 'adm3_lines',
+    source: 'atlas',
+    'source-layer': 'adm3_lines',
     type: 'line',
     paint: {
       'line-color': 'black',

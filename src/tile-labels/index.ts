@@ -28,14 +28,7 @@ const applyLabel = (transformStream: any, data: any) => {
 };
 
 const inputDir = path.resolve(__dirname, '..', '..', 'data');
-const labels = [
-  'wld_adm0',
-  'wld_adm1',
-  'wld_adm2',
-  'wld_adm3',
-  'wld_adm4',
-  'wld_adm5',
-];
+const labels = ['adm0', 'adm1', 'adm2', 'adm3', 'adm4', 'adm5'];
 
 const { argv } = yargs
   .usage('$0 [--layer=name]')
