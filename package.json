@@ -18,7 +18,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "compress": "rm -f dist/tiles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf tiles.tar.gz fonts sprites styles v4",
     "upload": "s3cmd put dist/tiles.tar.gz s3://fieldmapsdata/",
-    "download": "curl https://data.fieldmaps.io/tiles.tar.gz --output atlas-styles.tar.gz",
+    "download": "curl https://data.fieldmaps.io/tiles.tar.gz --output tiles.tar.gz",
     "extract": "tar -xf tiles.tar.gz --directory public && rm tiles.tar.gz",
     "build": "yarn download && mkdir -p public && yarn extract"
   },
