@@ -12,15 +12,10 @@
     "tile-filter": "ts-node src/tiles/filter.ts",
     "tiles": "src/tiles/land.sh && src/tiles/adm-labels.sh && src/tiles/adm-lines.sh && src/tiles/tile-join.sh",
     "serve": "http-server dist",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "rm": "s3cmd rm s3://fieldmapstiles/ --force --recursive",
     "put": "s3cmd put dist/* s3://fieldmapstiles/ --recursive --acl-public --exclude '.DS_Store'",
-    "sync": "s3cmd sync dist/ s3://fieldmapstiles/ --delete-removed --acl-public --exclude '.DS_Store'",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "compress": "rm -f dist/tiles.tar.gz && cd dist && tar --exclude='*.DS_Store' -zcf tiles.tar.gz fonts sprites styles v4",
-    "upload": "s3cmd put dist/tiles.tar.gz s3://fieldmapsdata/ --acl-public",
-    "download": "curl https://data.fieldmaps.io/tiles.tar.gz --output tiles.tar.gz",
-    "extract": "tar -xf tiles.tar.gz --directory public && rm tiles.tar.gz",
-    "build": "yarn download && mkdir -p public && yarn extract"
+    "upload": "yarn rm && yarn put"
   },
   "dependencies": {
     "@turf/turf": "^5.1.6",
