@@ -21,15 +21,15 @@
     "@turf/turf": "^5.1.6",
     "ndjson": "^2.0.0",
     "polylabel": "^1.1.0",
-    "yargs": "^16.1.1"
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "@types/ndjson": "^2.0.0",
     "@types/polylabel": "^1.0.5",
-    "@types/yargs": "^15.0.11",
+    "@types/yargs": "^15.0.12",
     "http-server": "^0.12.3",
     "prettier": "^2.2.1",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.1.2"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   }
 }
