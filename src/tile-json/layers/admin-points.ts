@@ -2,7 +2,7 @@ export default [
   {
     description: '',
     fields: { name: 'String', pcode: 'String' },
-    id: 'adm0_labels',
+    id: 'adm0_points',
     maxzoom: 22,
     minzoom: 0,
     source: 'atlas',
@@ -11,7 +11,7 @@ export default [
   {
     description: '',
     fields: { name: 'String', pcode: 'String' },
-    id: 'adm1_labels',
+    id: 'adm1_points',
     maxzoom: 22,
     minzoom: 0,
     source: 'atlas',
@@ -20,7 +20,7 @@ export default [
   {
     description: '',
     fields: { name: 'String', pcode: 'String' },
-    id: 'adm2_labels',
+    id: 'adm2_points',
     maxzoom: 22,
     minzoom: 0,
     source: 'atlas',
@@ -29,7 +29,7 @@ export default [
   {
     description: '',
     fields: { name: 'String', pcode: 'String' },
-    id: 'adm3_labels',
+    id: 'adm3_points',
     maxzoom: 22,
     minzoom: 0,
     source: 'atlas',
@@ -38,7 +38,7 @@ export default [
   {
     description: '',
     fields: { name: 'String', pcode: 'String' },
-    id: 'adm4_labels',
+    id: 'adm4_points',
     maxzoom: 22,
     minzoom: 0,
     source: 'atlas',

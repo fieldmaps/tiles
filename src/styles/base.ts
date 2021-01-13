@@ -1,4 +1,4 @@
-const { HOST } = process.env;
+const HOST = process.env.HOST ?? 'https://tiles.fieldmaps.io';
 
 export default {
   version: 8,

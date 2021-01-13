@@ -1,4 +1,4 @@
-const { HOST } = process.env;
+const HOST = process.env.HOST ?? 'https://tiles.fieldmaps.io';
 const MIN_ZOOM = 0;
 const MAX_ZOOM = 10;
 
