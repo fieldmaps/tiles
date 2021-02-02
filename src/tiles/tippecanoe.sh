@@ -12,6 +12,7 @@ echo "adm0_polygons.mbtiles"
 tippecanoe \
   --layer="adm0_polygons" \
   --maximum-zoom=$MAX_ZOOM \
+  --simplify-only-low-zooms \
   --detect-shared-borders \
   --read-parallel \
   --no-tile-size-limit \
@@ -24,6 +25,7 @@ echo "adm0_lines.mbtiles"
 tippecanoe \
   --layer="adm0_lines" \
   --maximum-zoom=$MAX_ZOOM \
+  --simplify-only-low-zooms \
   --no-simplification-of-shared-nodes \
   --read-parallel \
   --no-tile-size-limit \
@@ -57,6 +59,7 @@ for l in {1..4}; do
       --layer="adm${l}_lines" \
       --minimum-zoom=$z \
       --maximum-zoom=$MAX_ZOOM \
+      --simplify-only-low-zooms \
       --no-simplification-of-shared-nodes \
       --read-parallel \
       --no-tile-size-limit \
