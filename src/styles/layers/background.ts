@@ -1,18 +1,23 @@
-export default [
-  {
-    id: 'ocean',
-    type: 'background',
-    paint: {
-      'background-color': '#88B3FB',
+import getColors from './colors';
+
+export default (themeName: string) => {
+  const colors = getColors(themeName);
+  return [
+    {
+      id: 'ocean',
+      type: 'background',
+      paint: {
+        'background-color': colors.ocean,
+      },
     },
-  },
-  {
-    id: 'land',
-    source: 'atlas',
-    'source-layer': 'land',
-    type: 'fill',
-    paint: {
-      'fill-color': '#FBF8F3',
+    {
+      id: 'adm0_polygons',
+      source: 'atlas',
+      'source-layer': 'adm0_polygons',
+      type: 'fill',
+      paint: {
+        'fill-color': colors.land,
+      },
     },
-  },
-];
+  ];
+};

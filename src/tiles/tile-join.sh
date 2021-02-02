@@ -8,6 +8,7 @@ if [ -d $OUTPUT ]; then
 fi
 mkdir -p $OUTPUT
 
+echo "${OUTPUT}"
 tile-join \
   --name=$NAME \
   --no-tile-compression \

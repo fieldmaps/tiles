@@ -6,18 +6,15 @@
   "author": "Max Malynowsky",
   "license": "MIT",
   "scripts": {
-    "styles": "HOST=http://localhost:8080 ts-node src/styles",
-    "tile-json": "HOST=http://localhost:8080 ts-node src/tile-json",
-    "tiles": "src/tiles/tippecanoe.sh && src/tiles/tile-join.sh",
+    "prod": "ts-node src/styles && ts-node src/tile-json",
+    "dev": "HOST=http://localhost:8080 ts-node src/styles && HOST=http://localhost:8080 ts-node src/tile-json",
+    "tiles": "src/tiles/tippecanoe.sh; src/tiles/tile-join.sh",
     "develop": "http-server dist",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "rm": "s3cmd rm s3://fieldmapstiles/ --force --recursive",
-    "put": "s3cmd put dist/* s3://fieldmapstiles/ --recursive --acl-public --exclude '.DS_Store'",
-    "upload": "yarn rm && yarn put"
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.14.20",
+    "@types/node": "^14.14.22",
     "http-server": "^0.12.3",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
