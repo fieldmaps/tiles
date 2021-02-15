@@ -1,6 +1,6 @@
 NAME="atlas"
 OUTPUT="dist/v4/${NAME}"
-TILES=$(ls data-tmp/*.mbtiles)
+TILES=$(ls tmp/**/*.mbtiles)
 
 if [ -d $OUTPUT ]; then
   echo "Deleting old output directory..."
@@ -13,5 +13,6 @@ tile-join \
   --name=$NAME \
   --no-tile-compression \
   --no-tile-size-limit \
+  --force \
   --output-to-directory="${OUTPUT}" \
   $TILES

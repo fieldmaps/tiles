@@ -7,7 +7,7 @@ export default (themeName: string) => {
       id: 'ocean',
       type: 'background',
       paint: {
-        'background-color': colors.ocean,
+        'background-color': colors.water,
       },
     },
     {

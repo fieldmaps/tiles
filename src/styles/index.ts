@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import base from './base';
-import background from './layers/background';
-import adminLines from './layers/admin-lines';
-import adminPoints from './layers/admin-points';
+import admPolygons from './layers/adm-polygons';
+import admLines from './layers/adm-lines';
+import admPoints from './layers/adm-points';
+import osmPolygons from './layers/osm-polygons';
+import osmLines from './layers/osm-lines';
 
 const host = process.env.HOST ?? 'https://tiles.fieldmaps.io';
 const themeNames = ['default', 'light', 'dark'];
@@ -14,9 +16,11 @@ for (const themeName of themeNames) {
   const style = {
     ...base(host),
     layers: [
-      ...background(themeName),
-      ...adminLines(themeName),
-      ...adminPoints(themeName),
+      ...admPolygons(themeName),
+      ...osmPolygons(themeName),
+      ...osmLines(themeName),
+      ...admLines(themeName),
+      ...admPoints(themeName),
     ],
   };
   fs.writeFileSync(output, JSON.stringify(style));

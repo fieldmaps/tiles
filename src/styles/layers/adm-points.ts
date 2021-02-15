@@ -10,6 +10,7 @@ export default (themeName: string) => {
       type: 'symbol',
       layout: {
         'text-field': '{adm0_label}',
+        // 'text-transform': 'uppercase',
         'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
@@ -26,6 +27,7 @@ export default (themeName: string) => {
       type: 'symbol',
       layout: {
         'text-field': '{adm1_name1}',
+        // 'text-transform': 'uppercase',
         'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
@@ -42,6 +44,7 @@ export default (themeName: string) => {
       type: 'symbol',
       layout: {
         'text-field': '{adm2_name1}',
+        // 'text-transform': 'uppercase',
         'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
@@ -58,6 +61,7 @@ export default (themeName: string) => {
       type: 'symbol',
       layout: {
         'text-field': '{adm3_name1}',
+        // 'text-transform': 'uppercase',
         'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
@@ -74,6 +78,7 @@ export default (themeName: string) => {
       type: 'symbol',
       layout: {
         'text-field': '{adm4_name1}',
+        // 'text-transform': 'uppercase',
         'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },
