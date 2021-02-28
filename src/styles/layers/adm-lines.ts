@@ -1,4 +1,4 @@
-import getColors from './colors';
+import getColors from '../colors';
 
 const WIDTH_STOP = 6;
 const WIDTH_0 = 2;

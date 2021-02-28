@@ -1,27 +1,21 @@
 import fs from 'fs';
 import path from 'path';
 import base from './base';
-import admPolygons from './layers/adm-polygons';
-import admLines from './layers/adm-lines';
-import admPoints from './layers/adm-points';
-import osmPolygons from './layers/osm-polygons';
-import osmLines from './layers/osm-lines';
+import * as layers from './layers';
 
-const host = process.env.HOST ?? 'https://tiles.fieldmaps.io';
-const themeNames = ['default', 'light', 'dark'];
-
-for (const themeName of themeNames) {
+const render = (host: string, layers: any, name: string) => {
   const outputDir = path.resolve(__dirname, '../../dist/styles/v1');
-  const output = path.resolve(outputDir, themeName + '.json');
-  const style = {
-    ...base(host),
-    layers: [
-      ...admPolygons(themeName),
-      ...osmPolygons(themeName),
-      ...osmLines(themeName),
-      ...admLines(themeName),
-      ...admPoints(themeName),
-    ],
-  };
+  const output = path.resolve(outputDir, name + '.json');
+  const style = { ...base(host), layers };
+  fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(output, JSON.stringify(style));
-}
+};
+
+export default (host: string) => {
+  render(host, layers.admin('mono-light'), 'admin-light');
+  render(host, layers.admin('mono-dark'), 'admin-dark');
+  render(host, layers.places('color-light'), 'places-light');
+  render(host, layers.places('color-dark'), 'places-dark');
+  render(host, layers.health('color-light'), 'health-light');
+  render(host, layers.health('color-dark'), 'health-dark');
+};

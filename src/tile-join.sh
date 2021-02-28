@@ -1,6 +1,6 @@
 NAME="atlas"
 OUTPUT="dist/v4/${NAME}"
-TILES=$(ls tmp/**/*.mbtiles)
+TILES=$(ls data/**/*.mbtiles)
 
 if [ -d $OUTPUT ]; then
   echo "Deleting old output directory..."

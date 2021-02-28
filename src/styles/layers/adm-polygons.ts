@@ -1,4 +1,4 @@
-import getColors from './colors';
+import getColors from '../colors';
 
 export default (themeName: string) => {
   const colors = getColors(themeName);

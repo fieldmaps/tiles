@@ -1,24 +1,8 @@
-import getColors from './colors';
+import getColors from '../colors';
 
 export default (themeName: string) => {
   const colors = getColors(themeName);
   return [
-    {
-      id: 'osm_rivers_river',
-      source: 'atlas',
-      'source-layer': 'osm_rivers_river',
-      type: 'line',
-      paint: {
-        'line-color': colors.water,
-        'line-width': {
-          stops: [
-            [10, 0],
-            [12, 2],
-          ],
-          base: 2,
-        },
-      },
-    },
     {
       id: 'osm_roads_trunk',
       source: 'atlas',
@@ -28,8 +12,8 @@ export default (themeName: string) => {
         'line-color': colors.road,
         'line-width': {
           stops: [
-            [4, 0],
-            [8, 2],
+            [4, 0.5],
+            [7, 3],
           ],
           base: 2,
         },
@@ -44,8 +28,8 @@ export default (themeName: string) => {
         'line-color': colors.road,
         'line-width': {
           stops: [
-            [6, 0],
-            [10, 2],
+            [5, 0.5],
+            [9, 2],
           ],
           base: 2,
         },
@@ -60,8 +44,8 @@ export default (themeName: string) => {
         'line-color': colors.road,
         'line-width': {
           stops: [
-            [8, 0],
-            [12, 1],
+            [7, 0.5],
+            [10, 1],
           ],
           base: 2,
         },
@@ -74,10 +58,11 @@ export default (themeName: string) => {
       type: 'line',
       paint: {
         'line-color': colors.road,
+        'line-dasharray': [2, 2],
         'line-width': {
           stops: [
-            [10, 0],
-            [12, 1],
+            [9, 0.5],
+            [11, 1],
           ],
           base: 2,
         },

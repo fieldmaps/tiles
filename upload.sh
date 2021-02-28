@@ -1,4 +1,5 @@
 # s3cmd rm --force --recursive --quiet s3://fieldmapstiles/
+yarn prod
 s3cmd put dist/fonts/* s3://fieldmapstiles/fonts/ --quiet --recursive --acl-public --exclude '.DS_Store'
 s3cmd put dist/sprites/* s3://fieldmapstiles/sprites/ --quiet --recursive --acl-public --exclude '.DS_Store'
 s3cmd put dist/styles/* s3://fieldmapstiles/styles/ --quiet --recursive --acl-public --exclude '.DS_Store'
