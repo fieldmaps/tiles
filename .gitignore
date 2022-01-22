@@ -1,5 +1,6 @@
-.vscode
-node_modules/
-data/
-tmp/
-dist/
+__pycache__
+/node_modules
+/data
+/tmp
+/dist
+/ansible/inventory.ini

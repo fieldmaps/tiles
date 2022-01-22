@@ -1,8 +1,9 @@
+import fs from 'fs';
+import path from 'path';
 import styles from './styles';
-import tileJson from './tile-json';
 
-const remoteHost = 'https://tiles.fieldmaps.io';
-const host = process.env.HOST ?? remoteHost;
+const inputConfig = path.resolve(__dirname, 'config.json');
+const outputConfig = path.resolve(__dirname, '../dist/config.json');
 
-styles(host);
-tileJson(host);
+styles();
+fs.copyFileSync(inputConfig, outputConfig);

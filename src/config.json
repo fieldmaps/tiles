@@ -1,0 +1,18 @@
+{
+  "options": {
+    "paths": {
+      "root": "",
+      "fonts": "fonts",
+      "sprites": "sprites",
+      "styles": "styles",
+      "mbtiles": "data"
+    },
+    "serveAllStyles": true,
+    "serveAllFonts": true
+  },
+  "data": {
+    "atlas": {
+      "mbtiles": "atlas.mbtiles"
+    }
+  }
+}

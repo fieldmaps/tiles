@@ -1,0 +1,8 @@
+[Unit]
+Description=tileserver-gl service
+
+[Service]
+ExecStart=tileserver-gl-light --config /usr/share/tileserver-gl/config.json
+
+[Install]
+WantedBy=multi-user.target

@@ -3,33 +3,53 @@ import admLabelsMinor from './adm-labels-minor';
 import admLines from './adm-lines';
 import admLinesMinor from './adm-lines-minor';
 import admPolygons from './adm-polygons';
-import osmPlaces from './osm-places';
-import osmHealth from './osm-health';
-import osmRoads from './osm-roads';
-import osmWater from './osm-water';
+import places from './places';
+import health from './health';
+import education from './education';
+import markets from './markets';
+import roads from './roads';
+import water from './water';
 
-export const admin = (colorTheme: string) => [
+export const adminLayer = (colorTheme: string) => [
   ...admPolygons(colorTheme),
-  ...osmWater(colorTheme),
-  ...osmRoads(colorTheme),
+  ...water(colorTheme),
+  ...roads(colorTheme),
   ...admLines(colorTheme),
   ...admLabels(colorTheme),
 ];
 
-export const places = (colorTheme: string) => [
+export const placesLayer = (colorTheme: string) => [
   ...admPolygons(colorTheme),
-  ...osmWater(colorTheme),
-  ...osmRoads(colorTheme),
+  ...water(colorTheme),
+  ...roads(colorTheme),
   ...admLinesMinor(colorTheme),
-  ...osmPlaces(colorTheme),
+  ...places(colorTheme),
   ...admLabelsMinor(colorTheme),
 ];
 
-export const health = (colorTheme: string) => [
+export const healthLayer = (colorTheme: string) => [
   ...admPolygons(colorTheme),
-  ...osmWater(colorTheme),
-  ...osmRoads(colorTheme),
+  ...water(colorTheme),
+  ...roads(colorTheme),
   ...admLinesMinor(colorTheme),
-  ...osmHealth(colorTheme),
+  ...health(colorTheme),
+  ...admLabelsMinor(colorTheme),
+];
+
+export const educationLayer = (colorTheme: string) => [
+  ...admPolygons(colorTheme),
+  ...water(colorTheme),
+  ...roads(colorTheme),
+  ...admLinesMinor(colorTheme),
+  ...education(colorTheme),
+  ...admLabelsMinor(colorTheme),
+];
+
+export const marketsLayer = (colorTheme: string) => [
+  ...admPolygons(colorTheme),
+  ...water(colorTheme),
+  ...roads(colorTheme),
+  ...admLinesMinor(colorTheme),
+  ...markets(colorTheme),
   ...admLabelsMinor(colorTheme),
 ];

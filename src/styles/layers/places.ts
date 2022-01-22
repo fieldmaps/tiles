@@ -15,9 +15,9 @@ export default (themeName: string) => {
   const colors = getColors(themeName);
   return [
     {
-      id: 'osm_populated_places_city',
+      id: 'places_city',
       source: 'atlas',
-      'source-layer': 'osm_populated_places_city',
+      'source-layer': 'places_city',
       type: 'circle',
       paint: {
         'circle-color': colors.place,
@@ -33,9 +33,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_populated_places_town',
+      id: 'places_town',
       source: 'atlas',
-      'source-layer': 'osm_populated_places_town',
+      'source-layer': 'places_town',
       type: 'circle',
       paint: {
         'circle-color': colors.place,
@@ -51,9 +51,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_populated_places_village',
+      id: 'places_village',
       source: 'atlas',
-      'source-layer': 'osm_populated_places_village',
+      'source-layer': 'places_village',
       type: 'circle',
       paint: {
         'circle-color': colors.place,
@@ -69,9 +69,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_populated_places_town_village',
+      id: 'places_village_label',
       source: 'atlas',
-      'source-layer': 'osm_populated_places_village',
+      'source-layer': 'places_village',
       type: 'symbol',
       minzoom: 12,
       layout: {
@@ -88,9 +88,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_populated_places_town_label',
+      id: 'places_town_label',
       source: 'atlas',
-      'source-layer': 'osm_populated_places_town',
+      'source-layer': 'places_town',
       type: 'symbol',
       layout: {
         'text-field': '{name}',
@@ -106,9 +106,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_populated_places_city_label',
+      id: 'places_city_label',
       source: 'atlas',
-      'source-layer': 'osm_populated_places_city',
+      'source-layer': 'places_city',
       type: 'symbol',
       layout: {
         'text-field': '{name}',

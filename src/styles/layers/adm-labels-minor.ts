@@ -9,7 +9,7 @@ export default (themeName: string) => {
       'source-layer': 'adm0_points',
       type: 'symbol',
       layout: {
-        'text-field': '{adm0_label}',
+        'text-field': '{adm0_name}',
         'text-font': ['noto-sans-condensed-light'],
         'text-size': 12,
       },

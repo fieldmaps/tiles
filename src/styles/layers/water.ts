@@ -4,27 +4,27 @@ export default (themeName: string) => {
   const colors = getColors(themeName);
   return [
     {
-      id: 'osm_wetlands',
+      id: 'wetlands',
       source: 'atlas',
-      'source-layer': 'osm_wetlands',
+      'source-layer': 'wetlands',
       type: 'fill',
       paint: {
         'fill-color': colors.wetland,
       },
     },
     {
-      id: 'osm_water',
+      id: 'water',
       source: 'atlas',
-      'source-layer': 'osm_water',
+      'source-layer': 'water',
       type: 'fill',
       paint: {
         'fill-color': colors.water,
       },
     },
     {
-      id: 'osm_rivers_all',
+      id: 'rivers_all',
       source: 'atlas',
-      'source-layer': 'osm_rivers_all',
+      'source-layer': 'rivers_all',
       type: 'line',
       paint: {
         'line-color': colors.water,

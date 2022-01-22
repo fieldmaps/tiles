@@ -4,9 +4,9 @@ export default (themeName: string) => {
   const colors = getColors(themeName);
   return [
     {
-      id: 'osm_roads_trunk',
+      id: 'roads_trunk',
       source: 'atlas',
-      'source-layer': 'osm_roads_trunk',
+      'source-layer': 'roads_trunk',
       type: 'line',
       paint: {
         'line-color': colors.road,
@@ -20,9 +20,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_roads_primary',
+      id: 'roads_primary',
       source: 'atlas',
-      'source-layer': 'osm_roads_primary',
+      'source-layer': 'roads_primary',
       type: 'line',
       paint: {
         'line-color': colors.road,
@@ -36,9 +36,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_roads_secondary',
+      id: 'roads_secondary',
       source: 'atlas',
-      'source-layer': 'osm_roads_secondary',
+      'source-layer': 'roads_secondary',
       type: 'line',
       paint: {
         'line-color': colors.road,
@@ -52,9 +52,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_roads_tertiary',
+      id: 'roads_tertiary',
       source: 'atlas',
-      'source-layer': 'osm_roads_tertiary',
+      'source-layer': 'roads_tertiary',
       type: 'line',
       paint: {
         'line-color': colors.road,

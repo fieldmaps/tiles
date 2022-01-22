@@ -18,7 +18,7 @@ export default (themeName: string) => {
   return [
     {
       id: 'adm0_lines_disp',
-      filter: ['>', 'adm0_type', 1],
+      filter: ['>', 'rank', 1],
       source: 'atlas',
       'source-layer': 'adm0_lines',
       type: 'line',
@@ -36,7 +36,7 @@ export default (themeName: string) => {
     },
     {
       id: 'adm0_lines',
-      filter: ['==', 'adm0_type', 1],
+      filter: ['==', 'rank', 1],
       source: 'atlas',
       'source-layer': 'adm0_lines',
       type: 'line',

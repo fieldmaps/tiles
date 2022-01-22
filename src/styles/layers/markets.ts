@@ -15,12 +15,12 @@ export default (themeName: string) => {
   const colors = getColors(themeName);
   return [
     {
-      id: 'osm_healthsites_all',
+      id: 'markets',
       source: 'atlas',
-      'source-layer': 'osm_healthsites_all',
+      'source-layer': 'markets',
       type: 'circle',
       paint: {
-        'circle-color': colors.health,
+        'circle-color': colors.markets,
         'circle-radius': {
           stops: [
             [6, 2],
@@ -33,9 +33,9 @@ export default (themeName: string) => {
       },
     },
     {
-      id: 'osm_healthsites_all_label',
+      id: 'markets_label',
       source: 'atlas',
-      'source-layer': 'osm_healthsites_all',
+      'source-layer': 'markets',
       type: 'symbol',
       layout: {
         'text-field': '{name}',
