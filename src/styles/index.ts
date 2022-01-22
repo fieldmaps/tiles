@@ -12,7 +12,7 @@ import {
 const render = (layers: any, name: string) => {
   const outputDir = path.resolve(__dirname, '../../dist/styles');
   const output = path.resolve(outputDir, name + '.json');
-  const style = { ...base(), layers };
+  const style = { ...base(name), layers };
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(output, JSON.stringify(style));
 };

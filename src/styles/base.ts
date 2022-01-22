@@ -1,6 +1,8 @@
-export default () => ({
+export default (name: string) => ({
   version: 8,
-  name: 'Atlas Default',
+  name: name
+    .replace('-', ' ')
+    .replace(/\w\S*/g, w => w.replace(/^\w/, c => c.toUpperCase())),
   sprite: 'default/sprite',
   glyphs: '{fontstack}/{range}.pbf',
   sources: {
